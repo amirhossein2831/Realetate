@@ -8,16 +8,19 @@
                         <figure class="overflow-hidden mb-0 d-flex justify-content-center">
                             <img src="{{$user->profile->header_image}}" class="rounded-top" alt="profile cover">
                         </figure>
-                        <div class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
+                        <div
+                            class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
                             <div>
                                 <img src="{{$user->profile->profile_image}}"
                                      alt="profile" class="wd-100 rounded-circle profile-image">
                                 <span class="h4 ms-2 text-dark ">{{$user->name}}</span>
                             </div>
                             <div class="d-none d-md-block">
-                                <button class="btn btn-primary btn-icon-text mb-4 border-transition edit br-8">
-                                    <i data-feather="edit" class="btn-icon-prepend"></i> Edit profile
-                                </button>
+                                <a href="{{ route('admin.profile.edit') }}">
+                                    <button class="btn btn-primary btn-icon-text mb-4 border-transition edit br-8">
+                                        <i data-feather="edit" class="btn-icon-prepend"></i> Edit profile
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
