@@ -24,11 +24,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
 
-Route::prefix('agent')->group(function () {
+Route::prefix('agent')->middleware(['auth', 'role:agent'])->group(function () {
     Route::get('/dashboard', [AgentController::class, 'dashboard'])->name('agent.dashboard');
 });
 
