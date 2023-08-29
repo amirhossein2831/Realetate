@@ -1,6 +1,5 @@
 @extends('admin.dashboard')
 @section('content')
-    <div class="page-wrapper">
 
     <div class="page-content">
 
@@ -10,8 +9,10 @@
             </div>
             <div class="d-flex align-items-center flex-wrap text-nowrap">
                 <div class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0" id="dashboardDate">
-                    <span class="input-group-text input-group-addon bg-transparent border-primary" data-toggle><i data-feather="calendar" class="text-primary"></i></span>
-                    <input type="text" class="form-control bg-transparent border-primary" placeholder="Select date" data-input>
+                        <span class="input-group-text input-group-addon bg-transparent border-primary" data-toggle><i
+                                data-feather="calendar" class="text-primary"></i></span>
+                    <input type="text" class="form-control bg-transparent border-primary" placeholder="Select date"
+                           data-input>
                 </div>
                 <button type="button" class="btn btn-outline-primary btn-icon-text me-2 mb-2 mb-md-0">
                     <i class="btn-icon-prepend" data-feather="printer"></i>
@@ -33,15 +34,29 @@
                                 <div class="d-flex justify-content-between align-items-baseline">
                                     <h6 class="card-title mb-0">New Customers</h6>
                                     <div class="dropdown mb-2">
-                                        <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i>
+                                                <span class="">View</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="edit-2"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Edit</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i>
+                                                <span class="">Delete</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="printer"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Print</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="download"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Download</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,15 +83,29 @@
                                 <div class="d-flex justify-content-between align-items-baseline">
                                     <h6 class="card-title mb-0">New Orders</h6>
                                     <div class="dropdown mb-2">
-                                        <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i>
+                                                <span class="">View</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="edit-2"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Edit</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i>
+                                                <span class="">Delete</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="printer"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Print</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="download"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Download</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -103,15 +132,29 @@
                                 <div class="d-flex justify-content-between align-items-baseline">
                                     <h6 class="card-title mb-0">Growth</h6>
                                     <div class="dropdown mb-2">
-                                        <a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i>
+                                                <span class="">View</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="edit-2"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Edit</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i>
+                                                <span class="">Delete</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="printer"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Print</span></a>
+                                            <a class="dropdown-item d-flex align-items-center"
+                                               href="javascript:;"><i data-feather="download"
+                                                                      class="icon-sm me-2"></i> <span
+                                                    class="">Download</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -143,32 +186,45 @@
                         <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
                             <h6 class="card-title mb-0">Revenue</h6>
                             <div class="dropdown">
-                                <a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="edit-2" class="icon-sm me-2"></i> <span
+                                            class="">Edit</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="trash" class="icon-sm me-2"></i> <span
+                                            class="">Delete</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="printer" class="icon-sm me-2"></i> <span
+                                            class="">Print</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="download" class="icon-sm me-2"></i> <span
+                                            class="">Download</span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="row align-items-start">
                             <div class="col-md-7">
-                                <p class="text-muted tx-13 mb-3 mb-md-0">Revenue is the income that a business has from its normal business activities, usually from the sale of goods and services to customers.</p>
+                                <p class="text-muted tx-13 mb-3 mb-md-0">Revenue is the income that a business has
+                                    from its normal business activities, usually from the sale of goods and services
+                                    to customers.</p>
                             </div>
                             <div class="col-md-5 d-flex justify-content-md-end">
                                 <div class="btn-group mb-3 mb-md-0" role="group" aria-label="Basic example">
                                     <button type="button" class="btn btn-outline-primary">Today</button>
-                                    <button type="button" class="btn btn-outline-primary d-none d-md-block">Week</button>
+                                    <button type="button" class="btn btn-outline-primary d-none d-md-block">Week
+                                    </button>
                                     <button type="button" class="btn btn-primary">Month</button>
                                     <button type="button" class="btn btn-outline-primary">Year</button>
                                 </div>
                             </div>
                         </div>
-                        <div id="revenueChart" ></div>
+                        <div id="revenueChart"></div>
                     </div>
                 </div>
             </div>
@@ -181,19 +237,30 @@
                         <div class="d-flex justify-content-between align-items-baseline mb-2">
                             <h6 class="card-title mb-0">Monthly sales</h6>
                             <div class="dropdown mb-2">
-                                <a type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="edit-2" class="icon-sm me-2"></i> <span
+                                            class="">Edit</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="trash" class="icon-sm me-2"></i> <span
+                                            class="">Delete</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="printer" class="icon-sm me-2"></i> <span
+                                            class="">Print</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="download" class="icon-sm me-2"></i> <span
+                                            class="">Download</span></a>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-muted">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
+                        <p class="text-muted">Sales are activities related to selling or the number of goods or
+                            services sold in a given time period.</p>
                         <div id="monthlySalesChart"></div>
                     </div>
                 </div>
@@ -204,15 +271,25 @@
                         <div class="d-flex justify-content-between align-items-baseline">
                             <h6 class="card-title mb-0">Cloud storage</h6>
                             <div class="dropdown mb-2">
-                                <a type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="edit-2" class="icon-sm me-2"></i> <span
+                                            class="">Edit</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="trash" class="icon-sm me-2"></i> <span
+                                            class="">Delete</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="printer" class="icon-sm me-2"></i> <span
+                                            class="">Print</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="download" class="icon-sm me-2"></i> <span
+                                            class="">Download</span></a>
                                 </div>
                             </div>
                         </div>
@@ -220,13 +297,16 @@
                         <div class="row mb-3">
                             <div class="col-6 d-flex justify-content-end">
                                 <div>
-                                    <label class="d-flex align-items-center justify-content-end tx-10 text-uppercase fw-bolder">Total storage <span class="p-1 ms-1 rounded-circle bg-secondary"></span></label>
+                                    <label
+                                        class="d-flex align-items-center justify-content-end tx-10 text-uppercase fw-bolder">Total
+                                        storage <span class="p-1 ms-1 rounded-circle bg-secondary"></span></label>
                                     <h5 class="fw-bolder mb-0 text-end">8TB</h5>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div>
-                                    <label class="d-flex align-items-center tx-10 text-uppercase fw-bolder"><span class="p-1 me-1 rounded-circle bg-primary"></span> Used storage</label>
+                                    <label class="d-flex align-items-center tx-10 text-uppercase fw-bolder"><span
+                                            class="p-1 me-1 rounded-circle bg-primary"></span> Used storage</label>
                                     <h5 class="fw-bolder mb-0">~5TB</h5>
                                 </div>
                             </div>
@@ -246,22 +326,33 @@
                         <div class="d-flex justify-content-between align-items-baseline mb-2">
                             <h6 class="card-title mb-0">Inbox</h6>
                             <div class="dropdown mb-2">
-                                <a type="button" id="dropdownMenuButton6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a type="button" id="dropdownMenuButton6" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="edit-2" class="icon-sm me-2"></i> <span
+                                            class="">Edit</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="trash" class="icon-sm me-2"></i> <span
+                                            class="">Delete</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="printer" class="icon-sm me-2"></i> <span
+                                            class="">Print</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="download" class="icon-sm me-2"></i> <span
+                                            class="">Download</span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-column">
                             <a href="javascript:;" class="d-flex align-items-center border-bottom pb-3">
                                 <div class="me-3">
-                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
+                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35"
+                                         alt="user">
                                 </div>
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between">
@@ -273,7 +364,8 @@
                             </a>
                             <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
                                 <div class="me-3">
-                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
+                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35"
+                                         alt="user">
                                 </div>
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between">
@@ -285,7 +377,8 @@
                             </a>
                             <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
                                 <div class="me-3">
-                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
+                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35"
+                                         alt="user">
                                 </div>
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between">
@@ -297,7 +390,8 @@
                             </a>
                             <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
                                 <div class="me-3">
-                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
+                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35"
+                                         alt="user">
                                 </div>
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between">
@@ -309,7 +403,8 @@
                             </a>
                             <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
                                 <div class="me-3">
-                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35" alt="user">
+                                    <img src="https://via.placeholder.com/35x35" class="rounded-circle wd-35"
+                                         alt="user">
                                 </div>
                                 <div class="w-100">
                                     <div class="d-flex justify-content-between">
@@ -329,15 +424,25 @@
                         <div class="d-flex justify-content-between align-items-baseline mb-2">
                             <h6 class="card-title mb-0">Projects</h6>
                             <div class="dropdown mb-2">
-                                <a type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
                                     <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="edit-2" class="icon-sm me-2"></i> <span
+                                            class="">Edit</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="trash" class="icon-sm me-2"></i> <span
+                                            class="">Delete</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="printer" class="icon-sm me-2"></i> <span
+                                            class="">Print</span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                            data-feather="download" class="icon-sm me-2"></i> <span
+                                            class="">Download</span></a>
                                 </div>
                             </div>
                         </div>
@@ -420,13 +525,4 @@
         </div> <!-- row -->
 
     </div>
-
-    <!-- partial:partials/_footer.html -->
-    <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
-        <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com" target="_blank">NobleUI</a>.</p>
-        <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
-    </footer>
-    <!-- partial -->
-
-</div>
 @endsection

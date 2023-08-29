@@ -11,11 +11,17 @@
 
     @include('admin.structure.navbar-dashboard')
 
-    @yield('content')
+    <div class="page-wrapper">
+
+        @yield('content')
+
+        @include('admin.structure.footer-dashboard')
+
+    </div>
 
 </div>
 
-@include('admin.structure.footer-dashboard')
+@include('admin.structure.script-dashboard')
 
 </body>
 </html>
