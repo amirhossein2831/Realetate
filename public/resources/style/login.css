@@ -1,0 +1,19 @@
+.button-signup {
+    transition: color 0.5s;
+}
+
+.button-signup:hover {
+    color: dodgerblue;
+}
+
+.br-10 {
+    border-radius: 10px;
+}
+.er-red{
+    color: red;
+    margin: 5px;
+}
+.br-r-10 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
