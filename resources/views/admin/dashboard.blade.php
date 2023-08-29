@@ -2,20 +2,20 @@
 
 <html lang="en">
 
-    @include('admin.header-dashboard')
+@include('admin.structure.header-dashboard')
 
 <body>
 <div class="main-wrapper">
 
-    @include('admin.sidebar-dashboard')
+    @include('admin.structure.sidebar-dashboard')
 
-    @include('admin.navbar-dashboard')
+    @include('admin.structure.navbar-dashboard')
 
     @yield('content')
 
 </div>
 
-    @include('admin.footer-dashboard')
+@include('admin.structure.footer-dashboard')
 
 </body>
 </html>
