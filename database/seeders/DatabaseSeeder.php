@@ -17,7 +17,5 @@ class DatabaseSeeder extends Seeder
         //Create the Admin Agent and User for working with them
         $this->call(UserTableSeeder::class);
 
-        //Create 20 User with random Info
-        User::factory()->count(20)->create();
     }
 }
