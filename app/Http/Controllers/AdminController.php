@@ -10,7 +10,9 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.index');
+        return view('admin.index',[
+            'user'=>Auth::user()->load('profile')
+        ]);
     }
 
     public function show()
