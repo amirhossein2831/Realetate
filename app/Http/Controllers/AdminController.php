@@ -13,6 +13,13 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
+    public function show()
+    {
+        return view('admin.profile', [
+            'user' => Auth::user()
+        ]);
+    }
+    
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
