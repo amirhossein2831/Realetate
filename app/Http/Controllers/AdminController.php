@@ -16,7 +16,7 @@ class AdminController extends Controller
     public function show()
     {
         return view('admin.profile', [
-            'user' => Auth::user()
+            'user' => Auth::user()->load('profile')
         ]);
     }
 

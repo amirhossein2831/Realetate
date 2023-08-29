@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Profile;
 use App\Models\User;
-use Database\Factories\ProfileFactory;
-use Database\Factories\UserFactory;
 use Hash;
 use Illuminate\Database\Seeder;
 
