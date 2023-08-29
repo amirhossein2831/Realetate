@@ -19,7 +19,7 @@ class AdminController extends Controller
             'user' => Auth::user()
         ]);
     }
-    
+
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
