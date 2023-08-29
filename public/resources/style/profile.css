@@ -1,0 +1,72 @@
+.border-transition {
+    position: relative;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.tweeter {
+    background-color: #3498db;
+}
+
+.instagram {
+    background: linear-gradient(45deg, orange, red, deeppink, purple);
+}
+
+.github {
+    background-color: #000000;
+}
+
+.border-transition::before,
+.border-transition::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border: 2px solid #3498db;
+    transition: all 0.3s ease-in-out;
+}
+
+.border-transition::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+}
+
+.border-transition::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 5px;
+}
+
+.border-transition:hover {
+    color: #3498db;
+    border: none;
+}
+
+.edit:hover {
+    background: #FFFFFF;
+}
+
+.border-transition:hover::before,
+.border-transition:hover::after {
+    width: 100%;
+}
+
+.profile-image {
+    object-fit: cover;
+    width: 5.3rem;
+    height: 5rem;
+}
+
+.br-8 {
+    border-radius: 8px;
+}
