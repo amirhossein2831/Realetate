@@ -8,8 +8,7 @@
                         <figure class="overflow-hidden mb-0 d-flex justify-content-center">
                             <img src="{{$user->profile->header_image}}" class="rounded-top" alt="profile cover">
                         </figure>
-                        <div
-                            class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
+                        <div class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
                             <div>
                                 <img src="{{$user->profile->profile_image}}"
                                      alt="profile" class="wd-100 rounded-circle profile-image">
@@ -23,52 +22,23 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <h6 class="card-title mb-0">About</h6>
-                            <div class="dropdown">
-                                <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                            data-feather="edit-2" class="icon-sm me-2"></i> <span
-                                            class="">Edit</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                            data-feather="git-branch" class="icon-sm me-2"></i> <span
-                                            class="">Update</span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                            data-feather="eye" class="icon-sm me-2"></i> <span
-                                            class="">View all</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <p>{{$user->profile->about}}</p>
+                        <x-profile-info label="About:" value="{{$user->profile->about}}"/>
+                        <x-profile-info label="Joined:" value="{{$user->created_at->format('M d,Y')}}"/>
+                        <x-profile-info label="Address:" value="{{$user->profile->address}}"/>
+                        <x-profile-info label="Email:" value="{{$user->email}}"/>
                         <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Joined:</label>
-                            <p class="text-muted">{{$user->created_at->format('M d,Y')}}</p>
-                        </div>
-                        <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Address:</label>
-                            <p class="text-muted">{{$user->profile->address}}</p>
-                        </div>
-                        <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Email:</label>
-                            <p class="text-muted">{{$user->email}}</p>
-                        </div>
-                        <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Website:</label>
+                            <label class="tx-11 fw-bolder mb-0 text-uppercase ml-20">Website:</label>
                             @if($user->profile->github)
-                                <p class="text-muted">{{$user->profile->github}}</p>
+                                <p class="text-muted ml-25 mtp-5">{{$user->profile->github}}</p>
                             @endif
                             @if($user->profile->instagram)
-                                <p class="text-muted">{{$user->profile->instagram}}</p>
+                                <p class="text-muted ml-25 mtp-5">{{$user->profile->instagram}}</p>
                             @endif
                             @if($user->profile->tweeter)
-                                <p class="text-muted">{{$user->profile->tweeter}}</p>
+                                <p class="text-muted ml-25 mtp-5">{{$user->profile->tweeter}}</p>
                             @endif
                         </div>
-                        <div class="mt-3 d-flex social-links">
+                        <div class="mt-3 d-flex social-links ml-20">
                             <x-social-media-link url="{{$user->profile->github}}" name="github"/>
                             <x-social-media-link url="{{$user->profile->tweeter}}" name="twitter"/>
                             <x-social-media-link url="{{$user->profile->instagram}}" name="instagram"/>
