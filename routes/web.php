@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::post('/logout',[AdminController::class,'destroy'])->name('admin.logout');
+    Route::get('/profile', [AdminController::class, 'show'])->name('admin.profile');
 });
 
 //Agent grout route
