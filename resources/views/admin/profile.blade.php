@@ -69,24 +69,9 @@
                             @endif
                         </div>
                         <div class="mt-3 d-flex social-links">
-                            @if($user->profile->github)
-                                <a href="{{$user->profile->github}}"
-                                   class="btn btn-icon border btn-xs me-2 border-transition github">
-                                    <i data-feather="github"></i>
-                                </a>
-                            @endif
-                            @if($user->profile->tweeter)
-                                <a href="{{$user->profile->tweeter}}"
-                                   class="btn btn-icon border btn-xs me-2 border-transition tweeter">
-                                    <i data-feather="twitter"></i>
-                                </a>
-                            @endif
-                            @if($user->profile->instagram)
-                                <a href="{{$user->profile->instagram}}"
-                                   class="btn btn-icon border btn-xs me-2 border-transition instagram">
-                                    <i data-feather="instagram"></i>
-                                </a>
-                            @endif
+                            <x-social-media-link url="{{$user->profile->github}}" name="github"/>
+                            <x-social-media-link url="{{$user->profile->tweeter}}" name="twitter"/>
+                            <x-social-media-link url="{{$user->profile->instagram}}" name="instagram"/>
                         </div>
                     </div>
                 </div>
