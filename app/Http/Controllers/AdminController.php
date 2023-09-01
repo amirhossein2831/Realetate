@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\admin\UpdateProfileRequest;
 use App\Http\Requests\Auth\AdminLoginRequest;
-use App\Http\Requests\Auth\LoginRequest;
-use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -47,6 +46,11 @@ class AdminController extends Controller
         return view('admin.edit-profile', [
             'user' => $user
         ]);
+    }
+
+    public function update(UpdateProfileRequest $request)
+    {
+
     }
 
     public function destroy(Request $request)
