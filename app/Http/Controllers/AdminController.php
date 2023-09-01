@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\admin\ChanePasswordRequest;
 use App\Http\Requests\admin\UpdateProfileRequest;
 use App\Http\Requests\Auth\AdminLoginRequest;
 use App\Providers\RouteServiceProvider;
+use Hash;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -81,11 +83,19 @@ class AdminController extends Controller
 
     public function changePass()
     {
-        return view('admin.changePass',[
-            'user'=>Auth::user()->load('profile')
+        return view('admin.changePass', [
+            'user' => Auth::user()->load('profile')
         ]);
     }
 
+    public function submitPass(ChanePasswordRequest $request)
+    {
+        $user = Auth::user();
+        $user->password = Hash::make($request->input('newPass'));
+        $user->save();
+        return redirect()->route('admin.profile')->with('success', 'password change successfully');
+    }
+    
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
