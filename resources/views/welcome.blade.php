@@ -396,7 +396,7 @@
                         User
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                         <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                     </ul>
                 </div>
@@ -405,7 +405,7 @@
                         Admin
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.login') }}">Login</a></li>
                         <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                     </ul>
                 </div>
