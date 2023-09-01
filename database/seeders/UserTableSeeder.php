@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Profile;
 use App\Models\User;
 use Hash;
 use Illuminate\Database\Seeder;
@@ -44,5 +45,9 @@ class UserTableSeeder extends Seeder
             'role' => 'user',
             'status' => 'active'
         ]);
-    }
+
+        //Create 20 User with random Info
+        User::factory(10)->create()->each(function ($user) {
+            $user->profile()->save(Profile::factory()->make());
+        });    }
 }

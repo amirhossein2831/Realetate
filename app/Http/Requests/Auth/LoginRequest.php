@@ -49,7 +49,7 @@ class LoginRequest extends FormRequest
             ->orWhere('phone', $login)
             ->first();
 
-        if (!$user || !Hash::check($this->password, $user->password)) {
+        if (!$user || !Hash::check($this->password, $user->password) || $user->role === 'admin') {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([

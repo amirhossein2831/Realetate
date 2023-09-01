@@ -42,7 +42,7 @@
                                 <p class="tx-12">Email</p></a>
                         </div>
                         <div class="col-3 text-center">
-                            <a href="pages/general/profile.html"
+                            <a href="{{ route('admin.profile') }}"
                                class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i
                                     data-feather="instagram" class="icon-lg mb-1"></i>
                                 <p class="tx-12">Profile</p></a>
@@ -66,7 +66,7 @@
                     <div class="p-1">
                         <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                             <div class="me-3">
-                                <img class="wd-30 ht-30 rounded-circle" src="https://via.placeholder.com/30x30"
+                                <img class="wd-30 ht-30 rounded-circle" src="{{$user->profile->profile_image}}"
                                      alt="userr">
                             </div>
                             <div class="d-flex justify-content-between flex-grow-1">
@@ -110,7 +110,7 @@
                             </div>
                             <div class="d-flex justify-content-between flex-grow-1">
                                 <div class="me-4">
-                                    <p>Amiah Burton</p>
+                                    <p>{{$user->name}}</p>
                                     <p class="tx-12 text-muted">Project deatline</p>
                                 </div>
                                 <p class="tx-12 text-muted">2 hrs ago</p>
@@ -209,21 +209,31 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="wd-30 ht-30 rounded-circle" src="https://via.placeholder.com/30x30" alt="profile">
+                    <img class="wd-30 ht-30 rounded-circle" src="
+                                                                          @if(Storage::exists($user->profile->profile_image))
+                                                                            {{ Storage::url($user->profile->profile_image) }}
+                                                                          @else
+                                                                            https://via.placeholder.com/1560x370
+                                                                          @endif" alt="profile" style="object-fit: cover">
                 </a>
                 <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
                     <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
                         <div class="mb-3">
-                            <img class="wd-80 ht-80 rounded-circle" src="https://via.placeholder.com/80x80" alt="">
+                            <img class="wd-80 ht-80 rounded-circle" src="
+                                                                          @if(Storage::exists($user->profile->profile_image))
+                                                                            {{ Storage::url($user->profile->profile_image) }}
+                                                                          @else
+                                                                            https://via.placeholder.com/1560x370
+                                                                          @endif" alt="profile" style="object-fit: cover">
                         </div>
                         <div class="text-center">
-                            <p class="tx-16 fw-bolder">Amiah Burton</p>
-                            <p class="tx-12 text-muted">amiahburton@gmail.com</p>
+                            <p class="tx-16 fw-bolder">{{$user->name}}</p>
+                            <p class="tx-12 text-muted">{{$user->email}}</p>
                         </div>
                     </div>
                     <ul class="list-unstyled p-1">
                         <li class="dropdown-item py-2">
-                            <a href="pages/general/profile.html" class="text-body ms-0">
+                            <a href="{{ route('admin.profile') }}" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="user"></i>
                                 <span>Profile</span>
                             </a>

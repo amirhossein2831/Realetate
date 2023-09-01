@@ -15,3 +15,6 @@
 <!-- Custom js for this page -->
 <script src="{{asset('/assets/js/dashboard-dark.js')}}"></script>
 <!-- End custom js for this page -->
+
+<script src="{{asset('/resources/js/addImage.js')}}"></script>
+<script src="{{asset('/resources/js/hideFlashMassage.js')}}"></script>

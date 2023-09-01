@@ -18,9 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Admin group route
-Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::post('/logout',[AdminController::class,'destroy'])->name('admin.logout');
+Route::prefix('admin')->as('admin.')->middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::post('/logout',[AdminController::class,'destroy'])->name('logout');
+    Route::get('/profile', [AdminController::class, 'show'])->name('profile');
+    Route::get('/profile/edit', [AdminController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile/update', [AdminController::class, 'update'])->name('profile.update');
+    Route::get('/changePass', [AdminController::class, 'changePass'])->name('changePass');
+    Route::post('/changePass', [AdminController::class, 'submitPass'])->name('submitPass');
 });
 
 //Agent grout route
