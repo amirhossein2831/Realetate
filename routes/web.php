@@ -23,7 +23,7 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/logout',[AdminController::class,'destroy'])->name('admin.logout');
     Route::get('/profile', [AdminController::class, 'show'])->name('admin.profile');
     Route::get('/profile/edit', [AdminController::class, 'edit'])->name('admin.profile.edit');
-    Route::patch('/profile', [AdminController::class, 'update'])->name('admin.profile.update');
+    Route::patch('/profile/edit', [AdminController::class, 'update'])->name('admin.profile.update');
 });
 
 //Agent grout route

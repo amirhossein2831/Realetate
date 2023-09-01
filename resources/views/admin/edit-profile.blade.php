@@ -30,7 +30,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h6 class="card-title">Profile Info</h6>
-                        <form>
+                        <form action="{{ route('admin.profile.update') }}" method="post">
+                            @csrf
+                            @method('PATCH')
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}">
@@ -82,7 +84,7 @@
                             </div>
                             <div class="mb-3 input-image">
                                 <img class="rounded-circle images"
-                                     src="{{ $user->profile->header_image }}" alt="ss">     <!-- should change with Storage --> 
+                                     src="{{ $user->profile->header_image }}" alt="ss">     <!-- should change with Storage -->
                                 <div class="mb-2">
                                     <label class="form-label" for="header_image">Header Image</label>
                                     <input class="form-control" type="file" id="header_image" name="header_image">
