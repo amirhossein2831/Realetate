@@ -1,6 +1,13 @@
 @extends('admin.dashboard')
 @section('content')
     <div class="page-content">
+        <div>
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
         <div class="row">
             <div class="col-12 grid-margin">
                 <div class="card">
@@ -11,9 +18,9 @@
                         <div
                             class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
                             <div>
-                                <img src="{{$user->profile->profile_image}}"                <!-- should change with Storage -->
+                                <img src="{{$user->profile->profile_image}}"
                                      alt="profile" class="wd-100 rounded-circle profile-image">
-                                <span class="h4 ms-2 text-dark ">{{$user->name}}</span>
+                                <span class="h4 ms-2 text-dark ">{{$user->name}}</span>    <!-- should change with Storage -->
                             </div>
                             <div class="d-none d-md-block">
                                 <a href="{{ route('admin.profile.edit') }}">

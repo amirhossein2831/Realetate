@@ -36,11 +36,17 @@
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}">
+                                @error('name')
+                                    <p>{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" value="{{ $user->username }}">
+                                @error('username')
+                                      <p>{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <div class="mb-3">
@@ -74,24 +80,7 @@
                                 <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $user->profile->instagram }}">
                             </div>
 
-                            <div class="mb-3 input-image">
-                                <img class="rounded-circle images"
-                                     src="{{ $user->profile->profile_image }}" alt="sdf">       <!-- should change with Storage -->
-                                <div class="mb-2">
-                                    <label class="form-label" for="profile_image">Profile Image</label>
-                                    <input class="form-control" type="file" id="profile_image" name="profile_image">
-                                </div>
-                            </div>
-                            <div class="mb-3 input-image">
-                                <img class="rounded-circle images"
-                                     src="{{ $user->profile->header_image }}" alt="ss">     <!-- should change with Storage -->
-                                <div class="mb-2">
-                                    <label class="form-label" for="header_image">Header Image</label>
-                                    <input class="form-control" type="file" id="header_image" name="header_image">
-                                </div>
-                            </div>
-
-                            <button class="btn btn-outline-primary" type="submit">Submit form</button>
+                            <button class="btn btn-outline-primary" type="submit">Update</button>
                         </form>
                     </div>
                 </div>

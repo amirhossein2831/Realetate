@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\admin\UpdateProfileRequest;
 use App\Http\Requests\Auth\AdminLoginRequest;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -50,7 +51,11 @@ class AdminController extends Controller
 
     public function update(UpdateProfileRequest $request)
     {
-
+        $userInfo = $request->only('name','username','phone');
+        $profileInfo = $request->only('about', 'address', 'github','tweeter','instagram');
+        Auth::user()->update($userInfo);
+        Auth::user()->profile()->update($profileInfo);
+        return redirect()->route('admin.profile')->with('success','profile updated successfully');
     }
 
     public function destroy(Request $request)
