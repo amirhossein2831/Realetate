@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\admin;
 
+use Auth;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateProfileRequest extends FormRequest
 {
@@ -23,17 +25,15 @@ class UpdateProfileRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'name' => 'sometimes|required',
-            'username' => 'sometimes|required|unique:users',
-            'phone'=>'sometimes|required|numeric',
-            'address' => 'sometimes|required',
-            'about' => 'sometimes|required',
-            'github' => 'sometimes|required',
-            'tweeter' => 'sometimes|required',
-            'instagram' => 'sometimes|required',
-            'profile_image' => 'sometimes|required|image',
-            'header_image'=>'sometimes|required|image'
-        ];
+            return [
+                'name'=>'sometimes|required',
+                'username'=>['sometimes','required',Rule::unique('users')->ignore(Auth::id())],
+                'phone'=>'sometimes|required|numeric',
+                'address'=>'sometimes|required',
+                'about'=>'sometimes|required',
+                'github' => 'sometimes|required|url',
+                'tweeter' => 'sometimes|required|url',
+                'instagram' => 'sometimes|required|url',
+            ];
     }
 }
