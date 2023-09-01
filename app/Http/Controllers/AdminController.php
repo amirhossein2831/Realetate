@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\Auth\AdminLoginRequest;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,6 +25,20 @@ class AdminController extends Controller
         return view('admin.profile', [
             'user' => Auth::user()->load('profile')
         ]);
+    }
+
+    public function create()
+    {
+        return view('admin.login');
+    }
+
+    public function store(AdminLoginRequest $request): RedirectResponse
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
     }
 
     public function edit()
