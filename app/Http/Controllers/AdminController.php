@@ -95,7 +95,7 @@ class AdminController extends Controller
         $user->save();
         return redirect()->route('admin.profile')->with('success', 'password change successfully');
     }
-    
+
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
