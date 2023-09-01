@@ -40,6 +40,12 @@
                                         <i data-feather="edit" class="btn-icon-prepend"></i> Edit profile
                                     </button>
                                 </a>
+                                <a href="{{ route('admin.changePass') }}">
+                                    <button class="btn btn-primary btn-icon-text mb-4 border-transition edit br-8">
+                                        <i class="fas fa-lock" style="margin-right: 5px"></i>
+                                        Change Password
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

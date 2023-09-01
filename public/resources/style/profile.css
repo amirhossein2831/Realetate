@@ -128,3 +128,8 @@
 #flashMessage.hide {
     animation: hideFlashMessage 0.5s ease-out;
 }
+
+.w-rem-5 {
+    width: 5rem;
+
+}
