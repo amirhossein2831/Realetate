@@ -11,9 +11,9 @@ class UpdateProfileRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,19 @@ class UpdateProfileRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'name' => 'sometimes|required',
+            'username' => 'sometimes|required|unique:users',
+            'phone'=>'sometimes|required|numeric',
+            'address' => 'sometimes|required',
+            'about' => 'sometimes|required',
+            'github' => 'sometimes|required',
+            'tweeter' => 'sometimes|required',
+            'instagram' => 'sometimes|required',
+            'profile_image' => 'sometimes|required|image',
+            'header_image'=>'sometimes|required|image'
         ];
     }
 }
