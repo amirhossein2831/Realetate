@@ -90,9 +90,7 @@ class AdminController extends Controller
 
     public function submitPass(ChanePasswordRequest $request)
     {
-        $user = Auth::user();
-        $user->password = Hash::make($request->input('newPass'));
-        $user->save();
+        Auth::user()->update(['password' =>Hash::make($request->input('newPass'))]);
         return redirect()->route('admin.profile')->with('success', 'password change successfully');
     }
 
