@@ -5,18 +5,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\admin\UpdateProfileRequest;
 use App\Http\Requests\Auth\AdminLoginRequest;
-use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Storage;
 
 class AdminController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.index',[
-            'user'=>Auth::user()->load('profile')
+        return view('admin.index', [
+            'user' => Auth::user()->load('profile')
         ]);
     }
 
@@ -51,11 +51,32 @@ class AdminController extends Controller
 
     public function update(UpdateProfileRequest $request)
     {
-        $userInfo = $request->only('name','username','phone');
-        $profileInfo = $request->only('about', 'address', 'github','tweeter','instagram');
+        $user = Auth::user()->load('profile');
+        $profile = $user->profile;
+
+        $userInfo = $request->only('name', 'username', 'phone');
+        $profileInfo = $request->only('about', 'address', 'github', 'tweeter', 'instagram');
+
+        if ($request->file('header_image')) {
+            if ($profile->header_image && Storage::exists($profile->header_image)) {
+                Storage::delete($profile->header_image);
+            }
+
+            $imagePath = $request->file('header_image')->store('public/usersHeaderImage');
+            $profileInfo['header_image'] = $imagePath;
+        }
+
+        if ($request->file('profile_image')) {
+            if ($profile->profile_image && Storage::exists($profile->profile_image)) {
+                Storage::delete($profile->profile_image);
+            }
+
+            $imagePath = $request->file('profile_image')->store('public/usersProfileImage');
+            $profileInfo['profile_image'] = $imagePath;
+        }
         Auth::user()->update($userInfo);
         Auth::user()->profile()->update($profileInfo);
-        return redirect()->route('admin.profile')->with('success','profile updated successfully');
+        return redirect()->route('admin.profile')->with('success', 'profile updated successfully');
     }
 
     public function destroy(Request $request)
