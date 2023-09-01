@@ -13,14 +13,26 @@
                 <div class="card">
                     <div class="position-relative">
                         <figure class="overflow-hidden mb-0 d-flex justify-content-center">
-                            <img src="{{$user->profile->header_image}}" class="rounded-top" alt="profile cover">            <!-- should change with Storage -->
+                            <img src="
+                                      @if(Storage::exists($user->profile->header_image))
+                                        {{ Storage::url($user->profile->header_image) }}
+                                      @else
+                                        https://via.placeholder.com/1560x370
+                                      @endif
+                                        "class="rounded-top" alt="profile cover" style="width:100%;height: 40vh;object-fit: cover">
                         </figure>
                         <div
                             class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
                             <div>
-                                <img src="{{$user->profile->profile_image}}"
-                                     alt="profile" class="wd-100 rounded-circle profile-image">
-                                <span class="h4 ms-2 text-dark ">{{$user->name}}</span>    <!-- should change with Storage -->
+                                <img src="
+                                      @if(Storage::exists($user->profile->profile_image))
+                                        {{ Storage::url($user->profile->profile_image) }}
+                                      @else
+                                        https://via.placeholder.com/1560x370
+                                      @endif
+                                      " alt="profile" class="wd-100 rounded-circle profile-image">
+
+                                <span class="h4 ms-2 text-dark" style=";font-size: 2rem">{{$user->name}}</span>
                             </div>
                             <div class="d-none d-md-block">
                                 <a href="{{ route('admin.profile.edit') }}">
