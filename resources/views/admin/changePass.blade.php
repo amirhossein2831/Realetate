@@ -11,7 +11,7 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="oldPass" class="form-label">Old Password</label>
-                                <input type="password" class="form-control" id="oldPass" name="oldPass">
+                                <input type="password" class="form-control @error('oldPass') is-invalid @enderror" id="oldPass" name="oldPass">
                                 @error('oldPass')
                                 <p style="color: red">{{ $message }}</p>
                                 @enderror
@@ -19,7 +19,7 @@
 
                             <div class="mb-3">
                                 <label for="newPass" class="form-label">New Password</label>
-                                <input type="password" class="form-control" id="newPass" name="newPass">
+                                <input type="password" class="form-control @error('newPass') is-invalid @enderror" id="newPass" name="newPass">
                                 @error('newPass')
                                 <p style="color: red">{{ $message }}</p>
                                 @enderror
@@ -27,7 +27,7 @@
 
                             <div class="mb-3">
                                 <label for="confirmPass" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPass" name="confirmPass">
+                                <input type="password" class="form-control @error('confirmPass') is-invalid @enderror" id="confirmPass" name="confirmPass">
                                 @error('confirmPass')
                                 <p style="color: red">{{ $message }}</p>
                                 @enderror

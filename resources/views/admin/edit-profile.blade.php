@@ -11,7 +11,7 @@
                             @method('PATCH')
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ $user->name }}">
                                 @error('name')
                                 <p style="color: red">{{ $message }}</p>
                                 @enderror
@@ -19,7 +19,7 @@
 
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" name="username"
+                                <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username"
                                        value="{{ $user->username }}">
                                 @error('username')
                                 <p style="color: red">{{ $message }}</p>
@@ -28,7 +28,7 @@
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="text" class="form-control" id="phone" name="phone"
+                                <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone"
                                        value="{{ $user->phone }}">
                                 @error('phone')
                                 <p style="color: red">{{ $message }}</p>
@@ -37,7 +37,7 @@
 
                             <div class="mb-3">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" name="address"
+                                <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address"
                                        value="{{ $user->profile->address }}">
                                 @error('address')
                                 <p style="color: red">{{ $message }}</p>
@@ -46,7 +46,7 @@
 
                             <div class="mb-3">
                                 <label for="about" class="form-label">About</label>
-                                <textarea class="form-control" style="resize: none" id="about" name="about"
+                                <textarea class="form-control @error('about') is-invalid @enderror" style="resize: none" id="about" name="about"
                                           rows="5">{{ $user->profile->about }}</textarea>
                                 @error('about')
                                 <p style="color: red">{{ $message }}</p>
@@ -59,7 +59,7 @@
 
                                 <div class="mb-3 website">
                                     <label for="github" class="form-label site">Github: </label>
-                                    <input type="text" class="form-control" id="github" name="github"
+                                    <input type="text" class="form-control @error('github') is-invalid @enderror" id="github" name="github"
                                            value="{{ $user->profile->github }}">
                                 </div>
                                 @error('github')
@@ -72,7 +72,7 @@
                             <div>
                                 <div class="mb-3 website">
                                     <label for="tweeter" class="form-label site">Twitter: </label>
-                                    <input type="text" class="form-control" id="tweeter" name="tweeter"
+                                    <input type="text" class="form-control @error('tweeter') is-invalid @enderror" id="tweeter" name="tweeter"
                                            value="{{ $user->profile->tweeter }}">
                                 </div>
                                 @error('tweeter')
@@ -85,7 +85,7 @@
                             <div>
                                 <div class="mb-3 website">
                                     <label for="instagram" class="form-label site">Instagram: </label>
-                                    <input type="text" class="form-control" id="instagram" name="instagram"
+                                    <input type="text" class="form-control @error('instagram') is-invalid @enderror" id="instagram" name="instagram"
                                            value="{{ $user->profile->instagram }}">
                                 </div>
                                 @error('instagram')
