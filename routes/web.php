@@ -25,6 +25,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'role:admin'])->group(
     Route::get('/profile/edit', [AdminController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile/update', [AdminController::class, 'update'])->name('profile.update');
     Route::get('/changePass', [AdminController::class, 'changePass'])->name('changePass');
+    Route::post('/changePass', [AdminController::class, 'submitPass'])->name('submitPass');
 });
 
 //Agent grout route
