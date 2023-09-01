@@ -79,6 +79,13 @@ class AdminController extends Controller
         return redirect()->route('admin.profile')->with('success', 'profile updated successfully');
     }
 
+    public function changePass()
+    {
+        return view('admin.changePass',[
+            'user'=>Auth::user()->load('profile')
+        ]);
+    }
+
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
