@@ -82,7 +82,7 @@
                             </div>
                             <div class="mb-3 input-image">
                                 <img class="rounded-circle images"
-                                     src="{{ $user->profile->header_image }}" alt="ss">     <!-- should change with Storage -->
+                                     src="{{ $user->profile->header_image }}" alt="ss">     <!-- should change with Storage --> 
                                 <div class="mb-2">
                                     <label class="form-label" for="header_image">Header Image</label>
                                     <input class="form-control" type="file" id="header_image" name="header_image">
