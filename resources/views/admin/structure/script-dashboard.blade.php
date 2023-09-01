@@ -17,3 +17,4 @@
 <!-- End custom js for this page -->
 
 <script src="{{asset('/resources/js/addImage.js')}}"></script>
+<script src="{{asset('/resources/js/hideFlashMassage.js')}}"></script>

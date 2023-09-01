@@ -3,7 +3,7 @@
     <div class="page-content">
         <div>
             @if(session('success'))
-                <div class="alert alert-success">
+                <div class="alert alert-success" id="flashMessage">
                     {{ session('success') }}
                 </div>
             @endif
@@ -34,7 +34,7 @@
 
                                 <span class="h4 ms-2 text-dark" style=";font-size: 2rem">{{$user->name}}</span>
                             </div>
-                            <div class="d-none d-md-block">
+                            <div class="d-md-block">
                                 <a href="{{ route('admin.profile.edit') }}">
                                     <button class="btn btn-primary btn-icon-text mb-4 border-transition edit br-8">
                                         <i data-feather="edit" class="btn-icon-prepend"></i> Edit profile
