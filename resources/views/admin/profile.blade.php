@@ -6,12 +6,12 @@
                 <div class="card">
                     <div class="position-relative">
                         <figure class="overflow-hidden mb-0 d-flex justify-content-center">
-                            <img src="{{$user->profile->header_image}}" class="rounded-top" alt="profile cover">
+                            <img src="{{$user->profile->header_image}}" class="rounded-top" alt="profile cover">            <!-- should change with Storage -->
                         </figure>
                         <div
                             class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
                             <div>
-                                <img src="{{$user->profile->profile_image}}"
+                                <img src="{{$user->profile->profile_image}}"                <!-- should change with Storage -->
                                      alt="profile" class="wd-100 rounded-circle profile-image">
                                 <span class="h4 ms-2 text-dark ">{{$user->name}}</span>
                             </div>
