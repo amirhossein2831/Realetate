@@ -26,14 +26,14 @@ class UpdateProfileRequest extends FormRequest
     public function rules(): array
     {
             return [
-                'name'=>'sometimes|required',
-                'username'=>['sometimes','required',Rule::unique('users')->ignore(Auth::id())],
-                'phone'=>'sometimes|required|numeric',
-                'address'=>'sometimes|required',
-                'about'=>'sometimes|required',
-                'github' => 'sometimes|required|url',
-                'tweeter' => 'sometimes|required|url',
-                'instagram' => 'sometimes|required|url',
+                'name'=>'required',
+                'username'=>['required',Rule::unique('users')->ignore(Auth::id())],
+                'phone'=>'sometimes|nullable|numeric',
+                'address'=>'sometimes|nullable',
+                'about'=>'sometimes|nullable',
+                'github' => 'sometimes|nullable|url',
+                'tweeter' => 'sometimes|nullable|url',
+                'instagram' => 'sometimes|nullable|url',
                 'header_image'=>'sometimes|required|image',
                 'profile_image'=>'sometimes|required|image',
             ];
