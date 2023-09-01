@@ -34,6 +34,8 @@ class UpdateProfileRequest extends FormRequest
                 'github' => 'sometimes|required|url',
                 'tweeter' => 'sometimes|required|url',
                 'instagram' => 'sometimes|required|url',
+                'header_image'=>'sometimes|required|image',
+                'profile_image'=>'sometimes|required|image',
             ];
     }
 }
